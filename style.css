@@ -4,6 +4,47 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+  }
+
+  .cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition:
+      width 160ms ease,
+      height 160ms ease,
+      background 160ms ease,
+      border-color 160ms ease;
+  }
+
+  body.cursor-hover .cursor-ring {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #fff;
+  }
+}
+
 .punktlista {
   padding: 0;
   align-items: center;
@@ -76,4 +117,10 @@ body {
   dialog::backdrop {
     background: rgba(0, 0, 0, 0.5); /* Mörkar ner bakgrunden */
   }
+}
+
+.linkedin-btn,
+.person-btn,
+#close-btn {
+  cursor: pointer;
 }
