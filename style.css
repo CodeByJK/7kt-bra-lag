@@ -203,3 +203,60 @@ dialog::backdrop {
   display: block; /* Gör bilden till ett blockelement */
   margin: 0 auto; /* Centrerar bilden horisontellt */
 }
+.Rubrik1 {
+  animation: slideIn 1s ease-out; /*Slide in effekt på rubrik och loga*/
+}
+
+.gruppbild {
+  border: 2px solid #f6ff00; /* Svart kant runt bilden */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Lägger till en skugga för djup */
+}
+
+.gruppbild:hover {
+  transform: scale(1.05); /* Förstorar bilden lite vid hover */
+  transition: transform 0.3s ease; /* Lägger till en mjuk övergång */
+}
+
+.gruppbild.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw; /* Tar upp nästan hela bredden på skärmen */
+  height: auto; /* Behåller proportionerna */
+  z-index: 1000; /* Ligger ovanpå allt annat */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.counter-container {
+  margin: 30px auto;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+#click-btn {
+  background-color: #ffe600;
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#click-btn:hover {
+  background-color: #e6ce00;
+}

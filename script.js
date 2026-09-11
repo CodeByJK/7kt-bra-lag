@@ -48,3 +48,19 @@ personButtons.forEach((button) => {
 closeBtn.addEventListener("click", () => {
   popup.close();
 });
+
+// 1. Deklarera räknaren UTANFÖR klickfunktionen så den inte nollställs
+let count = 0;
+
+// 2. Hämta HTML-elementen
+const clickBtn = document.getElementById('click-btn');
+const countDisplay = document.getElementById('click-count');
+
+// 3. Lägg till en klick-lyssnare på knappen
+clickBtn.addEventListener('click', () => {
+  // Öka räknaren med 1
+  count++;
+  
+  // Uppdatera texten på sidan med den nya siffran
+  countDisplay.textContent = count;
+});
