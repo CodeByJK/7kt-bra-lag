@@ -194,11 +194,26 @@ dialog::backdrop {
 }
 
 .gruppbild {
-  width: 500px;        /* Sätter bredden på bilden */
-  height: auto;        /* Behåller bildens proportioner automatiskt */
-  border-radius: 8px;  /* Ger rundade hörn */
-  display: block;      /* Gör bilden till ett blockelement */
-  margin: 0 auto;      /* Centrerar bilden horisontellt */
+  width: 500px; /* Sätter bredden på bilden */
+  height: auto; /* Behåller bildens proportioner automatiskt */
+  border-radius: 8px; /* Ger rundade hörn */
+  display: block; /* Gör bilden till ett blockelement */
+  margin: 0 auto; /* Centrerar bilden horisontellt */
+}
+.Rubrik1 {
+  animation: slideIn 1s ease-out; /*Slide in effekt på rubrik och loga*/
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .counter-container {
