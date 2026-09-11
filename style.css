@@ -78,6 +78,16 @@ h1 {
   align-items: top left;
 }
 
+.rat-gif {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  width: 150px;
+  border-radius: 8px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
 .site-footer {
   border-top: 1px solid #000;
   margin-top: 50px;
@@ -162,6 +172,14 @@ dialog::backdrop {
     padding: 10px; /* Lite mindre marginaler på mobiler */
   }
 
+  .rat-gif {
+    position: static;
+    display: block;
+    width: min(150px, 70vw);
+    margin: 24px auto 0;
+    transform: none;
+  }
+
   .Rubrik1 {
     font-size: 1.8rem; /* Gör rubriken lite mindre så den får plats */
   }
@@ -173,4 +191,12 @@ dialog::backdrop {
   dialog {
     width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
   }
+}
+
+.min-bild {
+  width: 200px; /* Sätter bredden på bilden */
+  height: auto; /* Behåller bildens proportioner automatiskt */
+  border-radius: 8px; /* Ger rundade hörn */
+  display: block; /* Gör bilden till ett blockelement */
+  margin: 0 auto; /* Centrerar bilden horisontellt */
 }
