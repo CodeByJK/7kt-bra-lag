@@ -167,7 +167,6 @@ dialog::backdrop {
 
 /* Styling som endast gäller för skärmar som är max 600px breda (mobiler) */
 @media screen and (max-width: 600px) {
-  
   body {
     padding: 10px; /* Lite mindre marginaler på mobiler */
   }
@@ -191,5 +190,4 @@ dialog::backdrop {
   dialog {
     width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
   }
-  
 }
