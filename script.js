@@ -113,3 +113,9 @@ clickBtn.addEventListener("click", () => {
   // Uppdatera texten på sidan med den nya siffran
   countDisplay.textContent = count;
 });
+// Easter egg
+document.addEventListener("keydown", function (event) {
+  if (event.key.toLowerCase() === "r") {
+    document.getElementById("rat").style.display = "block";
+  }
+});
