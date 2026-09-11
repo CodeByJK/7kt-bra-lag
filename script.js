@@ -53,14 +53,29 @@ closeBtn.addEventListener("click", () => {
 let count = 0;
 
 // 2. Hämta HTML-elementen
-const clickBtn = document.getElementById('click-btn');
-const countDisplay = document.getElementById('click-count');
+const clickBtn = document.getElementById("click-btn");
+const countDisplay = document.getElementById("click-count");
 
 // 3. Lägg till en klick-lyssnare på knappen
-clickBtn.addEventListener('click', () => {
+clickBtn.addEventListener("click", () => {
   // Öka räknaren med 1
   count++;
-  
+
   // Uppdatera texten på sidan med den nya siffran
   countDisplay.textContent = count;
+});
+
+const getTime = new Date().getTime;
+const DestineTime = getTime + 10000;
+
+const timerInterval = setInterval(function () {
+  const difference = DestineTime - new Date().getTime();
+
+  if (difference <= 0) {
+    clearInterval(timerInterval);
+    const display = document.getElementById("countdown");
+    display.innerHTML = "Dags för redovisning!";
+    display.classList.add("expired-message");
+    return;
+  }
 });

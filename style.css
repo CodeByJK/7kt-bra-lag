@@ -224,6 +224,16 @@ dialog::backdrop {
   max-width: 250px;
 }
 
+.Klockan {
+  width: 250px;
+  background-color: #1e293b;
+  color: #ffffff;
+  font-family: sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
 #click-btn {
   background-color: #ffe600;
   color: #000000;
