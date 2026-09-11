@@ -1,12 +1,12 @@
 body {
-  background-color: #27da6c;
+  background-color: #1478d6;
   text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.site-header {
-  display: flex;
+.punktlista {
+  padding: 0;
   align-items: center;
-  gap: 16px;
 }
 
 .punktlista {
@@ -33,10 +33,47 @@ body {
   margin-top: 50px;
   padding: 20px 0;
   text-align: center;
-}
+  .linkedin-btn {
+    display: inline-block;
+    background-color: #0a66c2; /* LinkedIns officiella blå färg */
+    color: #ffffff; /* Vit textfärg */
+    padding: 10px 20px; /* Luft inuti knappen (upp/ner, höger/vänster) */
+    text-decoration: none; /* Tar bort det vanliga understrecket på länkar */
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 4px; /* Rundade hörn */
+    transition: background-color 0.2s ease;
+  }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  /* Ändra färg när man för muspekaren över knappen */
+  .linkedin-btn:hover {
+    background-color: #004182; /* Lite mörkare blå färg vid hover */
+  }
+
+  /* Gör att knapparna i listan ser ut som klickbar text */
+  .person-btn {
+    background: none;
+    border: none;
+    color: #0a66c2;
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 2px 0;
+  }
+
+  .person-btn:hover {
+    color: #004182;
+  }
+
+  /* Styla pop-up rutan */
+  dialog {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* Mörkar ner bakgrunden */
+  }
 }

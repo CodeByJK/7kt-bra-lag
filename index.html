@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>7kt bra lag</title>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -18,25 +19,68 @@
 
       <p>
         Vi är fyra killar och en tjej som ser fram emot att lära oss massor om
-        att hacka
+        att hacka.
+      </p>
+      <p>
+        Vi är ett nyfiket och tävlingsinriktat team som gillar att lösa problem
       </p>
       <ul class="punktlista">
-        <li>Hugo</li>
-        <li>Erico</li>
-        <li>Christan</li>
-        <li>Johanna</li>
-        <li>Oliver</li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Hugo gillar frontend och webbdesign."
+          >
+            Hugo
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Erico brinner för problemlösning och kod."
+          >
+            Erico
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Christan fokuserar på logik och backend."
+          >
+            Christan
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Johanna gillar UX och att bygga snygga gränssnitt."
+          >
+            Johanna
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Oliver gillar cybersäkerhet och hackning."
+          >
+            Oliver
+          </button>
+        </li>
       </ul>
     </div>
 
-    <div class="container"><</div>
+    <a
+      href="https://www.linkedin.com/school/chas-academy/"
+      class="linkedin-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
 
-    <div class="container"><</div>
-
-    <div class="Christian"><</div>
-    <h1>Christian Arroyo</h1>
-    <p>Hej jag heter Christian och är 31 år gammal.</p>
-
-    <footer class="site-footer">7kt Bra Lag &copy; 2026</footer>
+    <!-- Pop-up rutan som öppnas när man klickar på ett namn -->
+    <dialog id="popup">
+      <p id="popup-text"></p>
+      <button id="close-btn">Stäng</button>
+    </dialog>
   </body>
 </html>
