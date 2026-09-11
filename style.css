@@ -33,6 +33,8 @@ body {
   margin-top: 50px;
   padding: 20px 0;
   text-align: center;
+}
+
   .linkedin-btn {
     display: inline-block;
     background-color: #0a66c2; /* LinkedIns officiella blå färg */
@@ -45,35 +47,49 @@ body {
     transition: background-color 0.2s ease;
   }
 
-  /* Ändra färg när man för muspekaren över knappen */
-  .linkedin-btn:hover {
-    background-color: #004182; /* Lite mörkare blå färg vid hover */
-  }
+/* Person-knapparna i listan (görs synliga och klickbara) */
+.person-btn {
+  background: none;
+  border: none;
+  color: #ffffff; /* Vit text */
+  text-decoration: underline;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 0;
+  font-family: inherit;
+}
 
-  /* Gör att knapparna i listan ser ut som klickbar text */
-  .person-btn {
-    background: none;
-    border: none;
-    color: #0a66c2;
-    text-decoration: underline;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 2px 0;
-  }
+.person-btn:hover {
+  color: #ffe600; /* Gul färg när man för muspekaren över */
+}
 
-  .person-btn:hover {
-    color: #004182;
-  }
+.linkedin-btn {
+  display: inline-block;
+  background-color: #0a66c2 ; /* LinkedIns blå färg */
+  color: #ffffff;            /* Vit text */
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
 
-  /* Styla pop-up rutan */
-  dialog {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 400px;
-  }
+.linkedin-btn:hover {
+  background-color: #004182; /* Mörkare blå vid hover */
+}
 
-  dialog::backdrop {
-    background: rgba(0, 0, 0, 0.5); /* Mörkar ner bakgrunden */
-  }
+/* Pop-up rutan (Dialog) */
+dialog {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  color: #333333; /* Mörk text inuti pop-upen */
+  background-color: #ffffff;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6); /* Mörkar ner bakgrunden när pop-up visas */
 }
