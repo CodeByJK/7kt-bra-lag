@@ -60,6 +60,7 @@ body {
 h1 {
   text-align: center;
   transform: translateY(30px);
+  filter: drop-shadow(3px 3px 2px #000000);
 }
 
 .Rubrik1 {
@@ -110,7 +111,7 @@ h1 {
 .person-btn {
   background: none;
   border: none;
-  color: #ffffff; /* Vit text */
+  color: black; /* Svart text */
   text-decoration: underline;
   font-size: 1.2rem;
   cursor: pointer;
