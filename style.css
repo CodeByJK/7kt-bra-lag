@@ -1,0 +1,9 @@
+.Hugo {
+  border: 1px solid #000;
+  border-radius: 5px;
+  border-width: 2px;
+  margin-bottom: 50px;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+}
