@@ -77,6 +77,16 @@ h1 {
   align-items: top left;
 }
 
+.rat-gif {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  width: 150px;
+  border-radius: 8px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
 .site-footer {
   border-top: 1px solid #000;
   margin-top: 50px;
@@ -160,6 +170,14 @@ dialog::backdrop {
   
   body {
     padding: 10px; /* Lite mindre marginaler på mobiler */
+  }
+
+  .rat-gif {
+    position: static;
+    display: block;
+    width: min(150px, 70vw);
+    margin: 24px auto 0;
+    transform: none;
   }
 
   .Rubrik1 {
