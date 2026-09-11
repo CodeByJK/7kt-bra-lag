@@ -201,7 +201,7 @@ dialog::backdrop {
   margin: 0 auto; /* Centrerar bilden horisontellt */
 }
 .Rubrik1 {
-  animation: slideIn 1s ease-out;
+  animation: slideIn 1s ease-out; /*Slide in effekt på rubrik och loga*/
 }
 
 @keyframes slideIn {
