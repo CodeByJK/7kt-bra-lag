@@ -192,8 +192,8 @@ dialog::backdrop {
   }
 }
 
-.min-bild {
-  width: 200px;        /* Sätter bredden på bilden */
+.gruppbild {
+  width: 500px;        /* Sätter bredden på bilden */
   height: auto;        /* Behåller bildens proportioner automatiskt */
   border-radius: 8px;  /* Ger rundade hörn */
   display: block;      /* Gör bilden till ett blockelement */
