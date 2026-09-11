@@ -126,9 +126,12 @@ const timerInterval = setInterval(function () {
     display.innerHTML = "Dags för redovisning!";
     display.classList.add("expired-message");
     return;
-// Easter egg
-document.addEventListener("keydown", function (event) {
-  if (event.key.toLowerCase() === "r") {
-    document.getElementById("råtta").style.display = "block";
   }
+
+  // Easter egg
+  document.addEventListener("keydown", function (event) {
+    if (event.key.toLowerCase() === "r") {
+      document.getElementById("råtta").style.display = "block";
+    }
+  });
 });
