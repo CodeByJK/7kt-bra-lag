@@ -81,6 +81,61 @@ h1 {
   align-items: top left;
 }
 
+.quote-box {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 18px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+#quote-text {
+  margin: 0 0 14px;
+  color: #111;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+#new-quote-btn {
+  padding: 9px 16px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+#new-quote-btn:hover {
+  background: #333;
+}
+
+.confetti-piece {
+  position: fixed;
+  width: 8px;
+  height: 12px;
+  pointer-events: none;
+  z-index: 20;
+  animation: confetti-fall 900ms ease-out forwards;
+}
+
+@keyframes confetti-fall {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(
+        calc(-50% + var(--confetti-x)),
+        calc(-50% + var(--confetti-y))
+      )
+      rotate(var(--confetti-rotation));
+  }
+}
+
 .rat-gif {
   position: fixed;
   right: 24px;
@@ -169,39 +224,68 @@ dialog::backdrop {
   cursor: pointer;
 }
 
-/* Styling som endast gäller för skärmar som är max 600px breda (mobiler) */
+/* Styling som aktiveras när fönstret dras ihop (max 600px brett) */
 @media screen and (max-width: 600px) {
   body {
-    padding: 10px; /* Lite mindre marginaler på mobiler */
+    padding: 10px; /* Mindre marginaler längst ut i kanterna */
   }
 
-  .rat-gif {
-    position: static;
-    display: block;
-    width: min(150px, 70vw);
-    margin: 24px auto 0;
-    transform: none;
-  }
-
-  .Rubrik1 {
-    font-size: 1.8rem; /* Gör rubriken lite mindre så den får plats */
-  }
-
+  /* Gör att bilden/loggan anpassar sig och krymper med fönstret */
   .logga {
-    width: 150px; /* Gör bilden mindre på små skärmar */
+    width: 80% !important;
+    max-width: 200px !important;
+    height: auto !important;
   }
 
+  /* Gör rubriken lite mindre så den inte trycker ut bredden */
+  .Rubrik1 {
+    font-size: 1.3rem;
+    width: 95%;
+    padding: 8px 10px;
+  }
+
+  /* Gör LinkedIn-knappen anpassad för smala skärmar */
+  a.linkedin-btn {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ser till att pop-up-rutan får plats */
   dialog {
-    width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
+    width: 90% !important;
   }
 }
 
+.rat-gif {
+  position: static;
+  display: block;
+  width: min(150px, 70vw);
+  margin: 24px auto 0;
+  transform: none;
+}
+
+.Rubrik1 {
+  font-size: 1.8rem; /* Gör rubriken lite mindre så den får plats */
+}
+
+.logga {
+  width: 150px; /* Gör bilden mindre på små skärmar */
+}
+
+dialog {
+  width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
+}
+
 .gruppbild {
+  max-width: 600px;
   width: 500px; /* Sätter bredden på bilden */
   height: auto; /* Behåller bildens proportioner automatiskt */
   border-radius: 8px; /* Ger rundade hörn */
   display: block; /* Gör bilden till ett blockelement */
   margin: 0 auto; /* Centrerar bilden horisontellt */
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .Rubrik1 {
   animation: slideIn 1s ease-out; /*Slide in effekt på rubrik och loga*/
@@ -259,4 +343,7 @@ dialog::backdrop {
 
 #click-btn:hover {
   background-color: #e6ce00;
+}
+.rat-gif {
+  display: none;
 }
