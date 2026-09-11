@@ -1,7 +1,8 @@
 body {
   background: linear-gradient(to right, lightgreen, white);
   text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 1.15rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -59,11 +60,21 @@ body {
 
 h1 {
   text-align: center;
-  transform: translateY(30px);
-  filter: drop-shadow(3px 3px 2px #000000);
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  color: #ff4d6d;
+  font-weight: 900;
+  transform: translate(-50%, 30px);
+  text-shadow:
+    3px 3px 0 #ffe600,
+    6px 6px 0 #000;
 }
 
 .Rubrik1 {
+  position: relative;
   text-align: center;
   margin-bottom: 20px;
   border-radius: 8px;
@@ -76,6 +87,68 @@ h1 {
 .img {
   width: 200px;
   align-items: top left;
+}
+
+.quote-box {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 24px;
+  border: 3px dashed #ff4d6d;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 6px 6px 0 #ffe600;
+}
+
+#quote-text {
+  margin: 0 0 14px;
+  color: #111;
+  font-size: 1.35rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#new-quote-btn {
+  padding: 12px 20px;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: #ff4d6d;
+  color: #fff;
+  font-size: 1.05rem;
+  font-family: inherit;
+  font-weight: bold;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+#new-quote-btn:hover {
+  background: #f72585;
+  transform: translateY(-3px) rotate(-2deg) scale(1.05);
+}
+
+.confetti-piece {
+  position: fixed;
+  width: 8px;
+  height: 12px;
+  pointer-events: none;
+  z-index: 20;
+  animation: confetti-fall 900ms ease-out forwards;
+}
+
+@keyframes confetti-fall {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(
+        calc(-50% + var(--confetti-x)),
+        calc(-50% + var(--confetti-y))
+      )
+      rotate(var(--confetti-rotation));
+  }
 }
 
 .rat-gif {
@@ -101,7 +174,7 @@ h1 {
   color: #ffffff; /* Vit textfärg */
   padding: 10px 20px; /* Luft inuti knappen (upp/ner, höger/vänster) */
   text-decoration: none; /* Tar bort det vanliga understrecket på länkar */
-  font-family: sans-serif;
+  font-family: inherit;
   font-weight: bold;
   border-radius: 4px; /* Rundade hörn */
   transition: background-color 0.2s ease;
@@ -113,7 +186,7 @@ h1 {
   border: none;
   color: black; /* Svart text */
   text-decoration: underline;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer;
   padding: 5px 0;
   font-family: inherit;
@@ -166,42 +239,91 @@ dialog::backdrop {
   cursor: pointer;
 }
 
-/* Styling som endast gäller för skärmar som är max 600px breda (mobiler) */
+/* Styling som aktiveras när fönstret dras ihop (max 600px brett) */
 @media screen and (max-width: 600px) {
   body {
-    padding: 10px; /* Lite mindre marginaler på mobiler */
+    padding: 10px; /* Mindre marginaler längst ut i kanterna */
   }
 
-  .rat-gif {
-    position: static;
-    display: block;
-    width: min(150px, 70vw);
-    margin: 24px auto 0;
-    transform: none;
-  }
-
-  .Rubrik1 {
-    font-size: 1.8rem; /* Gör rubriken lite mindre så den får plats */
-  }
-
+  /* Gör att bilden/loggan anpassar sig och krymper med fönstret */
   .logga {
-    width: 150px; /* Gör bilden mindre på små skärmar */
+    width: 80% !important;
+    max-width: 200px !important;
+    height: auto !important;
   }
 
+  /* Gör rubriken lite mindre så den inte trycker ut bredden */
+  .Rubrik1 {
+    font-size: 1.3rem;
+    width: 95%;
+    padding: 8px 10px;
+  }
+
+  /* Gör LinkedIn-knappen anpassad för smala skärmar */
+  a.linkedin-btn {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ser till att pop-up-rutan får plats */
   dialog {
-    width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
+    width: 90% !important;
   }
 }
 
+.rat-gif {
+  position: static;
+  display: block;
+  width: min(150px, 70vw);
+  margin: 24px auto 0;
+  transform: none;
+}
+
+.Rubrik1 {
+  font-size: 1.8rem; /* Gör rubriken lite mindre så den får plats */
+}
+
+.logga {
+  width: 150px; /* Gör bilden mindre på små skärmar */
+}
+
+dialog {
+  width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
+}
+
 .gruppbild {
+  max-width: 600px;
   width: 500px; /* Sätter bredden på bilden */
   height: auto; /* Behåller bildens proportioner automatiskt */
   border-radius: 8px; /* Ger rundade hörn */
   display: block; /* Gör bilden till ett blockelement */
   margin: 0 auto; /* Centrerar bilden horisontellt */
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .Rubrik1 {
   animation: slideIn 1s ease-out; /*Slide in effekt på rubrik och loga*/
+}
+
+.gruppbild {
+  border: 2px solid #f6ff00; /* Svart kant runt bilden */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Lägger till en skugga för djup */
+}
+
+.gruppbild:hover {
+  transform: scale(1.05); /* Förstorar bilden lite vid hover */
+  transition: transform 0.3s ease; /* Lägger till en mjuk övergång */
+}
+
+.gruppbild.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw; /* Tar upp nästan hela bredden på skärmen */
+  height: auto; /* Behåller proportionerna */
+  z-index: 1000; /* Ligger ovanpå allt annat */
 }
 
 @keyframes slideIn {
@@ -246,4 +368,7 @@ dialog::backdrop {
 
 #click-btn:hover {
   background-color: #e6ce00;
+}
+.rat-gif {
+  display: none;
 }
