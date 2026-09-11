@@ -191,3 +191,18 @@ dialog::backdrop {
     width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
   }
 }
+.Rubrik1 {
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
