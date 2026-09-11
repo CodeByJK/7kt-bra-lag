@@ -15,12 +15,19 @@ body {
   margin: 0;
 }
 
+h1 {
+  text-align: center;
+  transform: translateY(30px);
+}
+
 .Rubrik1 {
   text-align: center;
   margin-bottom: 20px;
   border-radius: 8px;
   border: 1px solid #000;
   display: flex;
+  background-color: white;
+  gap: 20px;
 }
 
 .img {
