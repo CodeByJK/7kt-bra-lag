@@ -21,17 +21,16 @@ body {
   }
 
   .cursor-dot {
-    color: #fff;
+    color: #000;
     font-size: 1.25rem;
     font-weight: 900;
     line-height: 1;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   }
 
   .cursor-ring {
     width: 34px;
     height: 34px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid #000;
     transition:
       width 160ms ease,
       height 160ms ease,
@@ -42,8 +41,8 @@ body {
   body.cursor-hover .cursor-ring {
     width: 52px;
     height: 52px;
-    background: rgba(255, 255, 255, 0.18);
-    border-color: #fff;
+    background: rgba(0, 0, 0, 0.18);
+    border-color: #000;
   }
 }
 
