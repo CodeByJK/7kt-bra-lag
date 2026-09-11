@@ -61,17 +61,20 @@ body {
 h1 {
   text-align: center;
   margin: 0 auto;
+  position: absolute;
+  left: 50%;
   font-family: "Comic Sans MS", "Segoe Print", cursive;
   font-size: clamp(2.4rem, 7vw, 4.5rem);
   color: #ff4d6d;
   font-weight: 900;
-  transform: translateY(30px);
+  transform: translate(-50%, 30px);
   text-shadow:
     3px 3px 0 #ffe600,
     6px 6px 0 #000;
 }
 
 .Rubrik1 {
+  position: relative;
   text-align: center;
   margin-bottom: 20px;
   border-radius: 8px;
@@ -236,10 +239,7 @@ dialog::backdrop {
   cursor: pointer;
 }
 
-<<<<<<< Updated upstream
 /* Styling som aktiveras när fönstret dras ihop (max 600px brett) */
-=======
->>>>>>> Stashed changes
 @media screen and (max-width: 600px) {
   body {
     padding: 10px; /* Mindre marginaler längst ut i kanterna */
