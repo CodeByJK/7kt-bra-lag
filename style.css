@@ -21,15 +21,16 @@ body {
   }
 
   .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background: #fff;
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1;
   }
 
   .cursor-ring {
     width: 34px;
     height: 34px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid #000;
     transition:
       width 160ms ease,
       height 160ms ease,
@@ -40,8 +41,8 @@ body {
   body.cursor-hover .cursor-ring {
     width: 52px;
     height: 52px;
-    background: rgba(255, 255, 255, 0.18);
-    border-color: #fff;
+    background: rgba(0, 0, 0, 0.18);
+    border-color: #000;
   }
 }
 
@@ -83,17 +84,17 @@ h1 {
   text-align: center;
 }
 
-  .linkedin-btn {
-    display: inline-block;
-    background-color: #0a66c2; /* LinkedIns officiella blå färg */
-    color: #ffffff; /* Vit textfärg */
-    padding: 10px 20px; /* Luft inuti knappen (upp/ner, höger/vänster) */
-    text-decoration: none; /* Tar bort det vanliga understrecket på länkar */
-    font-family: sans-serif;
-    font-weight: bold;
-    border-radius: 4px; /* Rundade hörn */
-    transition: background-color 0.2s ease;
-  }
+.linkedin-btn {
+  display: inline-block;
+  background-color: #0a66c2; /* LinkedIns officiella blå färg */
+  color: #ffffff; /* Vit textfärg */
+  padding: 10px 20px; /* Luft inuti knappen (upp/ner, höger/vänster) */
+  text-decoration: none; /* Tar bort det vanliga understrecket på länkar */
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 4px; /* Rundade hörn */
+  transition: background-color 0.2s ease;
+}
 
 /* Person-knapparna i listan (görs synliga och klickbara) */
 .person-btn {
@@ -113,8 +114,8 @@ h1 {
 
 .linkedin-btn {
   display: inline-block;
-  background-color: #0a66c2 ; /* LinkedIns blå färg */
-  color: #ffffff;            /* Vit text */
+  background-color: #0a66c2; /* LinkedIns blå färg */
+  color: #ffffff; /* Vit text */
   padding: 10px 20px;
   text-decoration: none;
   font-family: sans-serif;
