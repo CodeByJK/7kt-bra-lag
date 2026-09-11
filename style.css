@@ -166,11 +166,39 @@ dialog::backdrop {
   cursor: pointer;
 }
 
-/* Styling som endast gäller för skärmar som är max 600px breda (mobiler) */
+/* Styling som aktiveras när fönstret dras ihop (max 600px brett) */
 @media screen and (max-width: 600px) {
+  
   body {
-    padding: 10px; /* Lite mindre marginaler på mobiler */
+    padding: 10px; /* Mindre marginaler längst ut i kanterna */
   }
+
+  /* Gör att bilden/loggan anpassar sig och krymper med fönstret */
+  .logga {
+    width: 80% !important;
+    max-width: 200px !important;
+    height: auto !important;
+  }
+
+  /* Gör rubriken lite mindre så den inte trycker ut bredden */
+  .Rubrik1 {
+    font-size: 1.3rem;
+    width: 95%;
+    padding: 8px 10px;
+  }
+
+  /* Gör LinkedIn-knappen anpassad för smala skärmar */
+  a.linkedin-btn {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ser till att pop-up-rutan får plats */
+  dialog {
+    width: 90% !important;
+  }
+} 
 
   .rat-gif {
     position: static;
@@ -191,14 +219,17 @@ dialog::backdrop {
   dialog {
     width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
   }
-}
+
 
 .gruppbild {
+  max-width: 600px;
   width: 500px; /* Sätter bredden på bilden */
   height: auto; /* Behåller bildens proportioner automatiskt */
   border-radius: 8px; /* Ger rundade hörn */
   display: block; /* Gör bilden till ett blockelement */
   margin: 0 auto; /* Centrerar bilden horisontellt */
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .Rubrik1 {
   animation: slideIn 1s ease-out; /*Slide in effekt på rubrik och loga*/
