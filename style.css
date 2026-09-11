@@ -191,3 +191,11 @@ dialog::backdrop {
     width: 90%; /* Gör pop-up-rutan bredare på mobilen så den tar upp nästan hela skärmen */
   }
 }
+
+.min-bild {
+  width: 200px;        /* Sätter bredden på bilden */
+  height: auto;        /* Behåller bildens proportioner automatiskt */
+  border-radius: 8px;  /* Ger rundade hörn */
+  display: block;      /* Gör bilden till ett blockelement */
+  margin: 0 auto;      /* Centrerar bilden horisontellt */
+}
