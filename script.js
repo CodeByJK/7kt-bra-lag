@@ -3,6 +3,18 @@ const popup = document.getElementById("popup");
 const popupText = document.getElementById("popup-text");
 const closeBtn = document.getElementById("close-btn");
 const personButtons = document.querySelectorAll(".person-btn");
+const quoteText = document.getElementById("quote-text");
+const newQuoteButton = document.getElementById("new-quote-btn");
+
+const memberQuotes = [
+  { name: "Oliver", quote: "En vacker dag du och Jag, vi har det bra." },
+  { name: "Erico", quote: "Nära skjuter ingen hare!" },
+  { name: "Hugo", quote: "Chips är Bra!" },
+  { name: "Johanna", quote: "Gräset inte alltid grönare på andra sidan." },
+  { name: "Christian", quote: '"Cash Me Ousside / How Bow Dah".' },
+];
+
+let currentQuoteIndex = -1;
 
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorRing = document.querySelector(".cursor-ring");
@@ -31,6 +43,18 @@ if (cursorDot && cursorRing) {
     });
   });
 }
+
+newQuoteButton.addEventListener("click", () => {
+  let nextQuoteIndex;
+
+  do {
+    nextQuoteIndex = Math.floor(Math.random() * memberQuotes.length);
+  } while (nextQuoteIndex === currentQuoteIndex);
+
+  currentQuoteIndex = nextQuoteIndex;
+  const selectedQuote = memberQuotes[currentQuoteIndex];
+  quoteText.textContent = `${selectedQuote.name}: ${selectedQuote.quote}`;
+});
 
 // Lägg till klick-lyssnare på varje person-knapp
 personButtons.forEach((button) => {

@@ -78,6 +78,36 @@ h1 {
   align-items: top left;
 }
 
+.quote-box {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 18px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+#quote-text {
+  margin: 0 0 14px;
+  color: #111;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+#new-quote-btn {
+  padding: 9px 16px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+#new-quote-btn:hover {
+  background: #333;
+}
+
 .rat-gif {
   position: fixed;
   right: 24px;
