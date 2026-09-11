@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>7kt bra lag</title>
+    <title>7kt Bra Lag</title>
+    <script src="script.js" defer></script>
   </head>
-  <h1>7kt Bra Produkter</h1>
+
   <body>
+    <div class="cursor-dot" aria-hidden="true">7</div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
     <div>
       <header class="Rubrik1">
-        <h1>7kt bra lag</h1>
         <div>
-          <img src="logo 7kt.png" alt="lagets logga" />
+          <img src="logo 7kt.png" alt="lagets logga" class="img" />
         </div>
+        <h1>7kt Bra Produkter</h1>
       </header>
 
       <p>
@@ -24,24 +28,66 @@
         Vi är ett nyfiket och tävlingsinriktat team som gillar att lösa problem
       </p>
       <p>Vi är redo för utmaningar!</p>
-
       <ul class="punktlista">
-        <li>Hugo</li>
-        <li>Erico</li>
-        <li>Christan</li>
-        <li>Johanna</li>
-        <li>Oliver</li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Hugo gillar frontend och webbdesign."
+          >
+            Hugo
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Erico brinner för problemlösning och kod."
+          >
+            Erico
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Christan fokuserar på logik och backend."
+          >
+            Christan
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Johanna gillar problemlösning och skappa snygga webbsidor."
+          >
+            Johanna
+          </button>
+        </li>
+        <li>
+          <button
+            class="person-btn"
+            data-info="Oliver gillar design och att lösa problem."
+          >
+            Oliver
+          </button>
+        </li>
       </ul>
     </div>
 
-    <div class="container"><</div>
+    <a
+      href="https://www.linkedin.com/company/chas-hack/posts/?feedView=all"
+      class="linkedin-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
 
-    <div class="container"><</div>
-
-    <div class="Christian"><</div>
-    <h1>Christian Arroyo</h1>
-    <p>Hej jag heter Christian och är 31 år gammal.</p>
-
-    <footer class="site-footer">7kt Bra Lag &copy; 2026</footer>
+    <!-- Pop-up rutan som öppnas när man klickar på ett namn -->
+    <dialog id="popup">
+      <p id="popup-text"></p>
+      <button id="close-btn">Stäng</button>
+    </dialog>
+    <footer class="site-footer">
+      <p>&copy; 2026 7kt Bra Lag</p>
+    </footer>
   </body>
 </html>

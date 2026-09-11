@@ -4,10 +4,77 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.site-header {
-  display: flex;
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor-dot {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #000;
+    transition:
+      width 160ms ease,
+      height 160ms ease,
+      background 160ms ease,
+      border-color 160ms ease;
+  }
+
+  body.cursor-hover .cursor-ring {
+    width: 52px;
+    height: 52px;
+    background: rgba(0, 0, 0, 0.18);
+    border-color: #000;
+  }
+}
+
+.punktlista {
+  padding: 0;
   align-items: center;
-  gap: 16px;
+}
+
+.punktlista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  transform: translateY(30px);
+}
+
+.Rubrik1 {
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  display: flex;
+  background-color: white;
+  gap: 20px;
+}
+
+.img {
+  width: 200px;
+  align-items: top left;
 }
 
 .site-footer {
@@ -17,8 +84,67 @@ body {
   text-align: center;
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+.linkedin-btn {
+  display: inline-block;
+  background-color: #0a66c2; /* LinkedIns officiella blå färg */
+  color: #ffffff; /* Vit textfärg */
+  padding: 10px 20px; /* Luft inuti knappen (upp/ner, höger/vänster) */
+  text-decoration: none; /* Tar bort det vanliga understrecket på länkar */
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 4px; /* Rundade hörn */
+  transition: background-color 0.2s ease;
+}
+
+/* Person-knapparna i listan (görs synliga och klickbara) */
+.person-btn {
+  background: none;
+  border: none;
+  color: #ffffff; /* Vit text */
+  text-decoration: underline;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 0;
+  font-family: inherit;
+}
+
+.person-btn:hover {
+  color: #ffe600; /* Gul färg när man för muspekaren över */
+}
+
+.linkedin-btn {
+  display: inline-block;
+  background-color: #0a66c2; /* LinkedIns blå färg */
+  color: #ffffff; /* Vit text */
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.linkedin-btn:hover {
+  background-color: #004182; /* Mörkare blå vid hover */
+}
+
+/* Pop-up rutan (Dialog) */
+dialog {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  color: #333333; /* Mörk text inuti pop-upen */
+  background-color: #ffffff;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6); /* Mörkar ner bakgrunden när pop-up visas */
+}
+
+.linkedin-btn,
+.person-btn,
+#close-btn {
+  cursor: pointer;
 }
