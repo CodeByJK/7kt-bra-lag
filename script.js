@@ -54,7 +54,32 @@ newQuoteButton.addEventListener("click", () => {
   currentQuoteIndex = nextQuoteIndex;
   const selectedQuote = memberQuotes[currentQuoteIndex];
   quoteText.textContent = `${selectedQuote.name}: ${selectedQuote.quote}`;
+  launchConfetti(newQuoteButton);
 });
+
+function launchConfetti(button) {
+  const colors = ["#f94144", "#f9c74f", "#43aa8b", "#277da1", "#f3722c"];
+  const buttonPosition = button.getBoundingClientRect();
+
+  for (let index = 0; index < 28; index += 1) {
+    const piece = document.createElement("span");
+    piece.className = "confetti-piece";
+    piece.style.left = `${buttonPosition.left + buttonPosition.width / 2}px`;
+    piece.style.top = `${buttonPosition.top + buttonPosition.height / 2}px`;
+    piece.style.backgroundColor = colors[index % colors.length];
+    piece.style.setProperty("--confetti-x", `${Math.random() * 240 - 120}px`);
+    piece.style.setProperty("--confetti-y", `${Math.random() * 220 + 80}px`);
+    piece.style.setProperty(
+      "--confetti-rotation",
+      `${Math.random() * 720 - 360}deg`,
+    );
+    document.body.appendChild(piece);
+
+    piece.addEventListener("animationend", () => {
+      piece.remove();
+    });
+  }
+}
 
 // Lägg till klick-lyssnare på varje person-knapp
 personButtons.forEach((button) => {
@@ -77,14 +102,14 @@ closeBtn.addEventListener("click", () => {
 let count = 0;
 
 // 2. Hämta HTML-elementen
-const clickBtn = document.getElementById('click-btn');
-const countDisplay = document.getElementById('click-count');
+const clickBtn = document.getElementById("click-btn");
+const countDisplay = document.getElementById("click-count");
 
 // 3. Lägg till en klick-lyssnare på knappen
-clickBtn.addEventListener('click', () => {
+clickBtn.addEventListener("click", () => {
   // Öka räknaren med 1
   count++;
-  
+
   // Uppdatera texten på sidan med den nya siffran
   countDisplay.textContent = count;
 });
