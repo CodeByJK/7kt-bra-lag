@@ -237,3 +237,6 @@ dialog::backdrop {
 #click-btn:hover {
   background-color: #e6ce00;
 }
+.rat-gif {
+  display: none;
+}

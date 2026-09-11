@@ -53,14 +53,21 @@ closeBtn.addEventListener("click", () => {
 let count = 0;
 
 // 2. Hämta HTML-elementen
-const clickBtn = document.getElementById('click-btn');
-const countDisplay = document.getElementById('click-count');
+const clickBtn = document.getElementById("click-btn");
+const countDisplay = document.getElementById("click-count");
 
 // 3. Lägg till en klick-lyssnare på knappen
-clickBtn.addEventListener('click', () => {
+clickBtn.addEventListener("click", () => {
   // Öka räknaren med 1
   count++;
-  
+
   // Uppdatera texten på sidan med den nya siffran
   countDisplay.textContent = count;
+});
+
+// Easter egg, tryck på bokstaven r så dycker den upp
+document.addEventListener("keydown", function (event) {
+  if (event.key.toLowerCase() === "r") {
+    document.getElementById("råtta").style.display = "block";
+  }
 });
