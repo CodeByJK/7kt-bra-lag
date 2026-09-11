@@ -117,6 +117,6 @@ clickBtn.addEventListener("click", () => {
 // Easter egg
 document.addEventListener("keydown", function (event) {
   if (event.key.toLowerCase() === "r") {
-    document.getElementById("rat").style.display = "block";
+    document.getElementById("råtta").style.display = "block";
   }
 });
