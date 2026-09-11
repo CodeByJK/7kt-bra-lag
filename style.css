@@ -200,3 +200,25 @@ dialog::backdrop {
   display: block;      /* Gör bilden till ett blockelement */
   margin: 0 auto;      /* Centrerar bilden horisontellt */
 }
+
+.counter-container {
+  margin: 30px auto;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+#click-btn {
+  background-color: #ffe600;
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#click-btn:hover {
+  background-color: #e6ce00;
+}
